@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Abdelkader Benradja — Head of Content</title>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;0,6..96,800;1,6..96,500&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#DCE1E6;--ui:#13233A;--ink:#13233A;--paper:#F1F3F5;--em:#0B7A5E;--mint:#BFE8D8;--pink:#F0476F;
+--serif:"Bodoni Moda","Serif Fallback",Didot,"Bodoni 72",Georgia,serif;--sans:"DM Sans",system-ui,-apple-system,sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0A1320;--ui:#E8EDF2}}
+:root[data-theme="dark"]{--bg:#0A1320;--ui:#E8EDF2}
+@font-face{font-family:"Serif Fallback";src:local("Georgia"),local("Times New Roman");size-adjust:90%}
+html{height:100%;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;height:100%;background:var(--bg);color:var(--ui);font-family:var(--sans);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;overflow:hidden}
+.mag{height:min(calc(100dvh - 100px),calc((100vw - 24px)*4/3));aspect-ratio:3/4;position:relative;perspective:2000px;container-type:size;font-size:2.5cqw}
+.leaf{position:absolute;inset:0;background:var(--paper);color:var(--ink);transform-origin:0 50%;backface-visibility:hidden;overflow:hidden;
+transition:transform 1.2s cubic-bezier(.62,0,.22,1);box-shadow:0 2cqw 5cqw rgba(0,0,0,.28);border-radius:0 .8cqw .8cqw 0}
+.leaf::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.55),rgba(0,0,0,0) 70%);opacity:0;transition:opacity 1.2s;pointer-events:none}
+.leaf.f{transform:rotateY(-112deg)}
+.leaf.f::after{opacity:.9}
+.pg{position:absolute;inset:0;padding:8cqw 7cqw 9cqw 9cqw}
+.fol{position:absolute;left:9cqw;right:7cqw;bottom:3.5cqw;display:flex;justify-content:space-between;font-size:1.7cqw;opacity:.6}
+h2{font:800 9.5cqw/.95 var(--serif);margin:0 0 4cqw;letter-spacing:-.01em}
+p{margin:0}
+/* cover */
+.cover{background:var(--ink);color:var(--paper)}
+.orb{position:absolute;border-radius:50%;animation:rise 2.4s cubic-bezier(.2,.7,.2,1) both}
+.o1{width:70cqw;height:70cqw;right:-18cqw;top:-10cqw;background:var(--em)}
+.o2{width:36cqw;height:36cqw;right:22cqw;top:30cqw;background:var(--pink);mix-blend-mode:screen;opacity:.9;animation-delay:.3s}
+.o3{width:22cqw;height:22cqw;right:6cqw;top:52cqw;border:.6cqw solid var(--mint);animation-delay:.6s}
+@keyframes rise{from{transform:scale(.2);opacity:0}to{transform:none;opacity:1}}
+.iss{position:absolute;left:9cqw;top:7cqw;font-size:2cqw;letter-spacing:.04em}
+.cover h1{position:absolute;left:8cqw;top:62cqw;margin:0;font:800 17.5cqw/.9 var(--serif);letter-spacing:-.02em;animation:up 1.4s .5s cubic-bezier(.2,.7,.2,1) both}
+.first{position:absolute;left:9cqw;top:56cqw;font:italic 500 4.6cqw var(--serif)}
+@keyframes up{from{transform:translateY(8cqw);opacity:0}to{transform:none;opacity:1}}
+.lines{position:absolute;left:9cqw;right:9cqw;bottom:10cqw}
+.lines b{display:block;font:500 italic 8.5cqw/1 var(--serif);color:var(--mint);margin-bottom:2cqw}
+.lines span{display:block;max-width:62cqw;font-size:2.6cqw;line-height:1.45}
+.bar{position:absolute;right:7cqw;bottom:7cqw;width:14cqw;height:7cqw;background:repeating-linear-gradient(90deg,var(--paper) 0 .5cqw,transparent .5cqw 1.1cqw,var(--paper) 1.1cqw 2.1cqw,transparent 2.1cqw 2.6cqw)}
+/* profile */
+.q{font:italic 500 7.8cqw/1.05 var(--serif);margin:6cqw 0 5cqw;max-width:78cqw}
+.rule{width:14cqw;height:1cqw;background:var(--pink);margin-bottom:5cqw}
+.txt{font-size:2.9cqw;line-height:1.55;max-width:70cqw}
+.stats{position:absolute;left:9cqw;right:7cqw;bottom:12cqw;display:flex;gap:6cqw}
+.stats div{flex:1;border-top:.5cqw solid var(--ink);padding-top:2cqw;font-size:2.3cqw}
+.stats b{display:block;font:800 9cqw/1 var(--serif);color:var(--em)}
+/* WissNj */
+.feat{background:var(--em);color:var(--paper)}
+.feat .k{font-size:2.3cqw;margin-bottom:3cqw}
+.feat h2{font-size:19cqw;margin-bottom:1cqw}
+.feat .role{font:italic 500 6cqw var(--serif);color:var(--mint);margin-bottom:3cqw}
+.feat .who{font-size:2.7cqw;line-height:1.4;max-width:68cqw;margin-bottom:6cqw}
+.m{display:grid;grid-template-columns:24cqw 1fr;gap:1.5cqw 3cqw;border-top:.4cqw solid var(--mint);padding:2.2cqw 0;font-size:2.4cqw;line-height:1.35}
+.m b{font:700 3cqw/1.1 var(--serif)}
+/* career */
+.row{display:flex;gap:3cqw;padding:0;border-top:.3cqw solid rgba(19,35,58,.3)}
+.row i{flex:none;width:15cqw;padding-top:.3cqw;font:800 3cqw/1.3 var(--serif);font-style:normal;color:var(--em);white-space:nowrap}
+.row b{display:block;font-size:2.4cqw;line-height:1.3;margin-bottom:.4cqw}
+.row span{font-size:2.1cqw;line-height:1.35;opacity:.85}
+.fit{display:flex;flex-direction:column;padding-bottom:11cqw}
+.fit h2{font-size:8.5cqw;margin-bottom:3cqw;flex:none}
+.fit .row,.fit .pf{flex:none;box-sizing:border-box}
+.fit .row{align-items:flex-start;padding:2.5cqw 0}
+.fit .pf{align-items:center;padding:2.8cqw 0}
+.fit .row:last-child,.fit .pf:last-child{border-bottom:.3cqw solid rgba(19,35,58,.3)}
+.pf{display:flex;gap:3.5cqw;padding:0;border-top:.3cqw solid rgba(19,35,58,.3)}
+.pf svg{flex:none;width:14cqw;height:14cqw;display:block}
+.pf>div,.row>div{flex:1;min-width:0;overflow-wrap:break-word}
+.pf b{display:block;font:800 3.5cqw/1.1 var(--serif);margin-bottom:.6cqw}
+.pf span{font-size:2.2cqw;line-height:1.4}
+.pf .a{fill:var(--em)}.pf .b{fill:var(--pink)}.pf .c{fill:var(--mint)}.pf .d{fill:var(--ink)}.pf .p{fill:var(--paper)}.pf .e{fill:rgba(19,35,58,.1)}
+/* skills */
+.g{margin-bottom:5cqw}
+.g h3{font:italic 500 4.6cqw var(--serif);margin:0 0 2cqw}
+.tags{display:flex;flex-wrap:wrap;gap:1.4cqw}
+.tags span{border:.3cqw solid var(--ink);border-radius:4cqw;padding:.9cqw 2.4cqw;font-size:2.3cqw}
+.g:nth-child(2) .tags span{background:var(--mint);border-color:var(--mint)}
+.g:nth-child(3) .tags span{background:var(--ink);color:var(--paper)}
+/* edu */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:5cqw}
+.two h3,.ed h3{font:italic 500 4.4cqw var(--serif);margin:0 0 2cqw}
+.it{font-size:2.3cqw;line-height:1.4;margin-bottom:2.4cqw}
+.it b{display:block}
+.lg{margin-bottom:2cqw;font-size:2.3cqw}
+.lg div{height:.9cqw;background:rgba(19,35,58,.15);margin-top:.8cqw}
+.lg div i{display:block;height:100%;background:var(--pink)}
+/* back */
+.back{background:var(--ink);color:var(--paper)}
+.back .big{font:800 12.5cqw/.95 var(--serif);margin:14cqw 0 5cqw;letter-spacing:-.01em}
+.back .big em{font-weight:500;color:var(--mint)}
+.back .c{font-size:3.2cqw;line-height:1.7}
+.back .o1{top:auto;bottom:-24cqw;right:-20cqw;animation:none}
+/* controls */
+.ctl{display:flex;align-items:center;gap:10px;height:40px}
+.ctl button{all:unset;cursor:pointer;width:40px;height:40px;border-radius:50%;border:1.5px solid var(--ui);display:grid;place-items:center;font-size:16px}
+.ctl button:focus-visible{outline:3px solid var(--pink);outline-offset:2px}
+.dots{display:flex;gap:7px}
+.dots button{width:10px;height:10px;border:1.5px solid var(--ui);padding:0}
+.dots button.on{background:var(--pink);border-color:var(--pink)}
+@media(prefers-reduced-motion:reduce){.leaf{transition:opacity .6s}.leaf.f{transform:none;opacity:0}.orb,.cover h1{animation:none}}
+</style>
+</head>
+<body>
+<div class="mag" id="mag">
+
+<section class="leaf cover">
+<div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div>
+<p class="iss">Édition 2026 · Alger</p>
+<p class="first">Abdelkader</p>
+<h1>Benradja</h1>
+<div class="lines"><b>Brand &amp; Content<br>Strategist</b><span>Personal brand, contenu et croissance pour des marques qui parlent lifestyle autant que chiffres.</span></div>
+<div class="bar"></div>
+</section>
+
+<section class="leaf">
+<div class="pg">
+<h2>Édito</h2>
+<div class="rule"></div>
+<p class="q">Faire parler une marque autant que ses chiffres.</p>
+<p class="txt">Marketeur digital depuis plus de six ans, entre startups, agences et conseil indépendant. Je construis des stratégies de contenu et de marque qui augmentent la visibilité, l'engagement et la génération de leads, et je coordonne les équipes créatives qui les font vivre.</p>
+<div class="stats"><div><b>6+</b>années d'expérience</div><div><b>8</b>expériences</div><div><b>3</b>langues</div></div>
+</div>
+<i class="fol">Benradja · Édition 2026<b>02</b></i>
+</section>
+
+<section class="leaf feat">
+<div class="pg">
+<p class="k">À la une · 2026 à aujourd'hui</p>
+<h2>WissNj</h2>
+<p class="role">Head of Content</p>
+<p class="who">Entrepreneur, youtubeur, podcasteur et créateur de contenu business.</p>
+<div class="m"><b>Personal brand</b><span>Pilotage de l'image et de la ligne éditoriale</span></div>
+<div class="m"><b>Équipes de création</b><span>Coordination au quotidien</span></div>
+<div class="m"><b>Revue éditoriale</b><span>Relecture et annotation des contenus avant publication</span></div>
+<div class="m"><b>Programmation</b><span>Planification et publication des contenus</span></div>
+<div class="m"><b>Veille concurrentielle</b><span>Analyse du marché et axes d'amélioration proposés</span></div>
+</div>
+<i class="fol">Benradja · Édition 2026<b>03</b></i>
+</section>
+
+<section class="leaf">
+<div class="pg fit">
+<h2>Le parcours</h2>
+<div class="row"><i>2025–</i><div><b>Marketeur digital freelance</b><span>Conseil, positionnement de marque, stratégie sociale : éducation, mode, image de marque</span></div></div>
+<div class="row"><i>2024–25</i><div><b>Digital Marketing Manager, Telenteo</b><span>Génération de leads, feuille de route contenu, SEO, webinaires</span></div></div>
+<div class="row"><i>2022–24</i><div><b>Fondateur, Social Butterfly Agency</b><span>Campagnes, sites et événements : immobilier, hôtellerie, retail, e-commerce</span></div></div>
+<div class="row"><i>2022</i><div><b>Digital Marketing Supervisor, Eyes of Community</b><span>Supervision d'une équipe digitale, campagnes internationales</span></div></div>
+<div class="row"><i>2022</i><div><b>Social Media &amp; Content Manager, Wassila App</b><span>Stratégie sociale, planning éditorial, copywriting, communauté</span></div></div>
+<div class="row"><i>2020–22</i><div><b>Community Manager, Fan Advertising</b><span>Réseaux sociaux, contenus visuels, rédaction web et blog SEO</span></div></div>
+<div class="row"><i>2020</i><div><b>Télémarketeur, Marketel</b><span>Prospection et communication de collecte humanitaire</span></div></div>
+</div>
+<i class="fol">Benradja · Édition 2026<b>04</b></i>
+</section>
+
+<section class="leaf">
+<div class="pg fit">
+<h2>Points forts</h2>
+<div class="pf"><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="30" class="c"/><circle cx="32" cy="32" r="18" class="a"/><circle cx="32" cy="32" r="8" class="b"/><circle cx="32" cy="32" r="24" fill="none" stroke="#13233A" stroke-width="2" stroke-dasharray="3 4"/></svg><div><b>Branding</b><span>Une voix, des valeurs et un positionnement clairs, pour qu'une marque soit reconnue avant même d'être nommée.</span></div></div>
+<div class="pf"><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="30" class="e"/><circle cx="24" cy="25" r="11" class="a"/><circle cx="40" cy="25" r="11" class="b"/><circle cx="24" cy="41" r="11" class="c"/><circle cx="40" cy="41" r="11" class="d"/></svg><div><b>Identité visuelle</b><span>Création d'image de marque, du logo à la ligne graphique : une identité cohérente sur tous les supports.</span></div></div>
+<div class="pf"><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="30" class="b"/><rect x="15" y="15" width="34" height="34" class="p"/><rect x="15" y="15" width="34" height="34" class="p" transform="rotate(45 32 32)"/><circle cx="32" cy="32" r="6" class="d"/></svg><div><b>Créativité</b><span>Des idées qui font réagir, pensées pour chaque format : vidéo, podcast, réseaux sociaux, événements.</span></div></div>
+<div class="pf"><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="30" class="a"/><rect x="14" y="32" width="8" height="14" class="p"/><rect x="26" y="24" width="8" height="22" class="p"/><rect x="38" y="16" width="8" height="30" class="p"/><circle cx="39" cy="26" r="10" fill="none" stroke="#BFE8D8" stroke-width="3"/><line x1="46" y1="33" x2="54" y2="41" stroke="#BFE8D8" stroke-width="3.5" stroke-linecap="round"/></svg><div><b>Analyse de concurrence</b><span>Une veille régulière pour repérer ce qui marche ailleurs et en tirer des axes d'amélioration concrets.</span></div></div>
+<div class="pf"><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="30" class="d"/><rect x="14" y="16" width="36" height="32" rx="4" class="p"/><path d="M14 20a4 4 0 0 1 4-4h28a4 4 0 0 1 4 4v5H14z" class="b"/><rect x="19" y="30" width="7" height="6" class="c"/><rect x="29" y="30" width="7" height="6" class="c"/><rect x="39" y="30" width="7" height="6" class="c"/><rect x="19" y="39" width="7" height="6" class="c"/><rect x="29" y="39" width="7" height="6" class="c"/><rect x="39" y="39" width="7" height="6" class="a"/></svg><div><b>Stratégie de contenu</b><span>Des lignes éditoriales et des calendriers au service d'un objectif : visibilité, engagement, leads.</span></div></div>
+</div>
+<i class="fol">Benradja · Édition 2026<b>05</b></i>
+</section>
+
+<section class="leaf">
+<div class="pg">
+<h2>Savoir-faire</h2>
+<div class="g"><h3>Stratégie</h3><div class="tags"><span>Stratégie digitale</span><span>Marketing de croissance</span><span>Génération de leads</span><span>Branding</span><span>Planification de campagnes</span><span>Stratégie marketing</span></div></div>
+<div class="g"><h3>Contenu</h3><div class="tags"><span>Content marketing</span><span>Copywriting</span><span>Storytelling</span><span>SEO on-page et off-page</span><span>Création de contenu</span><span>Design graphique</span><span>Stratégie réseaux sociaux</span></div></div>
+<div class="g"><h3>Pilotage</h3><div class="tags"><span>Gestion de projet</span><span>Coordination d'équipes</span><span>Revue éditoriale</span><span>Veille concurrentielle</span></div></div>
+</div>
+<i class="fol">Benradja · Édition 2026<b>06</b></i>
+</section>
+
+<section class="leaf">
+<div class="pg">
+<h2>Formation</h2>
+<div class="it"><b>Licence Management &amp; Entrepreneuriat</b>Université d'Alger 3 · 2021–2022</div>
+<div class="it"><b>Classes préparatoires</b>EHEC, École des Hautes Études Commerciales · 2019–2021</div>
+<div class="it"><b>Google Digital Marketing Fundamentals</b>Google Digital Garage · 2020</div>
+<div class="two" style="margin-top:6cqw">
+<div><h3>Langues</h3>
+<div class="lg">Arabe, natif<div><i style="width:100%"></i></div></div>
+<div class="lg">Français, natif<div><i style="width:100%"></i></div></div>
+<div class="lg">Anglais, avancé<div><i style="width:80%"></i></div></div></div>
+<div class="ed"><h3>Engagements</h3>
+<div class="it"><b>Alumni HEC</b>Digital &amp; Event Project Manager</div>
+<div class="it"><b>ETIC Club, ESI</b>Community Manager &amp; graphiste</div>
+<div class="it"><b>Génération Digitale Algérie</b>Ambassadeur</div>
+<div class="it"><b>Algeria Startup Challenge</b>Créateur de contenu</div></div>
+</div>
+</div>
+<i class="fol">Benradja · Édition 2026<b>07</b></i>
+</section>
+
+<section class="leaf back">
+<div class="orb o1"></div>
+<div class="pg">
+<p class="big">Prochain numéro : <em>votre marque.</em></p>
+<p class="c">Abdelkader Benradja<br>Head of Content · Digital Marketing Strategist<br>Alger, Algérie<br>0793 71 31 18<br>benradja.abdelkader@hotmail.com</p>
+</div>
+</section>
+
+</div>
+<div class="ctl">
+<button id="pv" aria-label="Page précédente">‹</button>
+<button id="pl" aria-label="Lecture automatique">❚❚</button>
+<div class="dots" id="dots"></div>
+<button id="nx" aria-label="Page suivante">›</button>
+</div>
+<script>
+(function(){
+var L=[].slice.call(document.querySelectorAll('.leaf')),N=L.length,i=0,tm=null,play=!matchMedia('(prefers-reduced-motion:reduce)').matches;
+var D=[3600,5200,6200,7000,6500,5200,6000],dots=document.getElementById('dots'),pl=document.getElementById('pl');
+L.forEach(function(_,k){var b=document.createElement('button');b.setAttribute('aria-label','Page '+(k+1));b.onclick=function(){stop();go(k)};dots.appendChild(b)});
+function render(){L.forEach(function(l,k){l.style.zIndex=N-k;l.classList.toggle('f',k<i);l.inert=k!==i});
+[].forEach.call(dots.children,function(d,k){d.classList.toggle('on',k===i)});pl.textContent=play?'❚❚':'▶'}
+function go(n){i=Math.max(0,Math.min(N-1,n));render()}
+function tick(){clearTimeout(tm);if(!play)return;tm=setTimeout(function(){if(i<N-1){go(i+1);tick()}else{play=false;render()}},D[i]||5000)}
+function stop(){play=false;clearTimeout(tm);render()}
+document.getElementById('nx').onclick=function(){stop();go(i+1)};
+document.getElementById('pv').onclick=function(){stop();go(i-1)};
+pl.onclick=function(){if(play){stop()}else{if(i===N-1)go(0);play=true;render();tick()}};
+document.addEventListener('keydown',function(e){if(e.key==='ArrowRight'){stop();go(i+1)}else if(e.key==='ArrowLeft'){stop();go(i-1)}});
+render();tick();
+})();
+</script>
+</body>
+</html>
